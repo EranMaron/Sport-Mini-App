@@ -14,6 +14,10 @@ app.get('/getTeamBetweenYears', controller.getTeamBetweenYears);
 
 app.post('/updateCoachName', controller.updateCoachName);
 
+app.get('/api', (req, res) => {
+    res.redirect("https://documenter.getpostman.com/view/5697633/RznCpz4V");
+})
+
 app.all('*', (req, res) => {
     res.status(404).send({"Status": "Failed", "Cause": "Wrong Route", "Details": "Must Select A Valid Route"});
     console.log("\n\tValid Route Must Be Select\n");
