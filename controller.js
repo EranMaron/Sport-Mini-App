@@ -148,7 +148,7 @@ module.exports = {
                 }
             });
             if(result.nModified < 1) {
-               res.status(204).send(`{"Status": "Failed", "team": ${JSON.stringify(teamUpdt)}, "new_coach": ${JSON.stringify(coachUpdt)}, "details": "Team not found in documents"}`); 
+               res.status(404).send(`{"Status": "Failed", "team": ${JSON.stringify(teamUpdt)}, "new_coach": ${JSON.stringify(coachUpdt)}, "details": "Team not found in documents"}`); 
                console.log("\t" + ++logCount + ")\tAttention\tThere was no updates.");
                return;
             }
